@@ -29,11 +29,11 @@ include:
     keymap: qwerty
     format: dongle
     artifact-name: klor_qwerty_dongle_right
-  - board: seeeduino_xiao_ble
+  - board: nice_nano_v2                                 
     keymap: qwerty
     format: dongle
-    shield: klor_dongle dongle_screen
-    artifact-name: totem_qwerty_dongle_yads
+    shield: klor_dongle_snake snake_adapter  
+    artifact-name: klor_qwerty_dongle_snake   
 
  # Firmware Reset
   - board: seeeduino_xiao_ble
