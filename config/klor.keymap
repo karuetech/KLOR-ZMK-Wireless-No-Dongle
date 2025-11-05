@@ -44,6 +44,16 @@
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
+
+        Backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <17 18>;
+        };
+
+        Screenshot {
+            bindings = <&kp LG(LS(S))>;
+            key-positions = <17 18 19>;
+        };
     };
 
     keymap {
@@ -51,10 +61,10 @@
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        base_layer {
+        QWERTY {
             // ┌───────────────────────────────────────────────────────────┐
 
-            label = "BASE";
+            label = "Default";
 
             // └───────────────────────────────────────────────────────────┘
             /*           ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
@@ -68,10 +78,10 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-            &kp Q       &kp W           &kp E               &kp R        &kp T                                   &kp Y    &kp U          &kp I      &kp O    &kp P
-&kp TAB     &hm LWIN A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LSHFT F  &kp G                                   &kp H    &hm RSHFT J    &kp K      &kp L    &kp SEMICOLON  &kp SQT
-&kp ESCAPE  &kp Z       &kp X           &kp C               &kp V        &kp B      &trans            &trans     &kp N    &kp M          &kp COMMA  &kp DOT  &kp FSLH       &kp BSLH
-                                        &kp ESCAPE          &mo LOWER    &kp SPACE  &kp LEFT_CONTROL  &kp ENTER  &kp RET  &kp BACKSPACE  &mo 2
+            &kp Q       &kp W           &kp E               &kp R        &kp T                                  &kp Y    &kp U          &kp I      &kp O    &kp P
+&kp TAB     &hm LWIN A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LSHFT F  &kp G                                  &kp H    &hm RSHFT J    &kp K      &kp L    &kp SEMICOLON  &kp SQT
+&kp ESCAPE  &kp Z       &kp X           &kp C               &kp V        &kp B      &trans            &trans    &kp N    &kp M          &kp COMMA  &kp DOT  &kp FSLH       &kp BSLH
+                                        &kp ESCAPE          &mo LOWER    &kp SPACE  &kp LEFT_CONTROL  &kp APOS  &kp RET  &kp BACKSPACE  &kp MINUS
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -79,10 +89,10 @@
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        lower_layer {
+        Navigation {
             // ┌───────────────────────────────────────────────────────────┐
 
-            label = "LOWER";
+            label = "Nav";
 
             // └───────────────────────────────────────────────────────────┘
             /*           ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
@@ -96,10 +106,10 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-        &ext_power EP_TOG  &trans     &kp UP    &trans     &kp LBRC                  &kp RBRC    &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_PLUS
-&trans  &rgb_ug RGB_EFF    &kp LEFT   &kp DOWN  &kp RIGHT  &kp LBKT                  &kp RBKT    &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MINUS     &trans
-&trans  &trans             &kp PG_UP  &kp CAPS  &kp PG_DN  &kp LPAR  &trans  &trans  &kp RPAR    &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &trans
-                                      &trans    &trans     &trans    &trans  &trans  &kp DELETE  &kp KP_N0  &trans
+        &ext_power EP_TOG  &trans     &kp UP    &trans     &kp LBRC                  &kp RBRC    &kp KP_N7     &kp KP_N8  &kp KP_N9  &kp KP_PLUS
+&trans  &rgb_ug RGB_EFF    &kp LEFT   &kp DOWN  &kp RIGHT  &kp LBKT                  &kp RBKT    &kp KP_N4     &kp KP_N5  &kp KP_N6  &kp KP_MINUS     &trans
+&trans  &trans             &kp PG_UP  &kp CAPS  &kp PG_DN  &kp LPAR  &trans  &trans  &kp RPAR    &kp NUMBER_1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &trans
+                                      &trans    &trans     &trans    &trans  &trans  &kp DELETE  &kp KP_N0     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
