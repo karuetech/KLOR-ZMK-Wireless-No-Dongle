@@ -13,12 +13,4 @@
         events = <0>;
     };
 
-    led_strip_snake: ws2812@0 {
-        compatible = "ws2812";
-        spi = <&spi1 0>;
-        pin = <15>;
-        label = "LED_STRIP_SNAKE";
-        chain-length = <5>;
-    };
-
 };
