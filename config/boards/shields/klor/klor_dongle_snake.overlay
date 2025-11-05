@@ -18,4 +18,14 @@
         rows = <0>;
         events = <0>;
     };
+
+/soc/spi@40004000/ws2812@0 {
+    compatible = "ws2812";
+    label = "led_strip_klor";  /* renamed to avoid conflict */
+    status = "okay";
+    pinctrl-0 = <&ws2812_default>;
+    pinctrl-names = "default";
+    /* other configuration stays the same */
+};
+
 };
