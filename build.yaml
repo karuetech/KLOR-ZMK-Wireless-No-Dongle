@@ -35,5 +35,5 @@ include:
   - board: nice_nano_v2                                 
     keymap: qwerty
     format: dongle
-    shield: totem_dongle_snake snake_adapter  
-    artifact-name: totem_qwerty_dongle_snake     
+    shield: klor_dongle_snake snake_adapter  
+    artifact-name: klor_qwerty_dongle_snake     
