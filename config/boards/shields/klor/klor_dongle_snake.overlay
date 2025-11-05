@@ -1,31 +1,12 @@
-/*
- * Copyright (c) 2022 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
-
 #include "klor.dtsi"
 
-/ {
-    chosen {
-        zmk,kscan = &mock_kscan;
-        wakeup-source;
-    };
-
-    mock_kscan: kscan_1 {
-        compatible = "zmk,kscan-mock";
-        columns = <0>;
-        rows = <0>;
-        events = <0>;
-    };
-
-&spi1 {          /* or whichever SPI node is used */
-    ws2812_klor: ws2812@0 {
-        compatible = "ws2812";
-        label = "led_strip_klor";  /* unique label */
-        status = "okay";
-        pinctrl-0 = <&ws2812_default>;
-        pinctrl-names = "default";
-    };
-
+&kscan0 {
+	col-gpios
+		= <&pro_micro 19 GPIO_ACTIVE_HIGH>
+		, <&pro_micro 18 GPIO_ACTIVE_HIGH>
+		, <&pro_micro 15 GPIO_ACTIVE_HIGH>
+		, <&pro_micro 14 GPIO_ACTIVE_HIGH>
+		, <&pro_micro 16 GPIO_ACTIVE_HIGH>
+		, <&pro_micro 10 GPIO_ACTIVE_HIGH>
+		;
 };
