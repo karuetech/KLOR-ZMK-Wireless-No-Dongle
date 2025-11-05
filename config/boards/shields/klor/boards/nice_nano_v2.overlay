@@ -46,6 +46,6 @@
 
 / {
     chosen {
-        zmk,underglow = &led_strip_snake_adapter;
+        zmk,underglow = &led_strip;
     };
 };
