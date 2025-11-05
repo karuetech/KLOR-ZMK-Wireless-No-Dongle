@@ -12,4 +12,13 @@
         rows = <0>;
         events = <0>;
     };
+
+    // LED strip on the Snake adapter
+    led_strip_snake: ws2812@0 {
+        compatible = "ws2812";
+        spi = <&spi1 0>;
+        pin = <15>;
+        label = "LED Strip Snake";
+        chain-length = <5>; // change this to your LED count
+    };
 };
