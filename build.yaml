@@ -19,9 +19,5 @@ include:
     shield: klor_left
   - board: nice_nano_v2
     shield: klor_right
-  - board: nice_nano_v2                                 
-    format: dongle
-    shield: klor_dongle_snake snake_adapter  
-    artifact-name: klor_qwerty_dongle_snake    
   - board: nice_nano_v2
     shield: settings_reset
