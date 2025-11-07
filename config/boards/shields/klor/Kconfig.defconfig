@@ -10,7 +10,7 @@ config ZMK_BLE
 if  SHIELD_KLOR_DONGLE_SNAKE 
 
 config ZMK_KEYBOARD_NAME
-    default "TOTEM"
+    default "KLOR"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
