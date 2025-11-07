@@ -23,9 +23,9 @@
     pinctrl-1 = <&spi3_sleep>;
     pinctrl-names = "default", "sleep";
 
-    led_strip: ws2812@0 {
+    led_strip_nano: ws2812@0 {
         compatible = "worldsemi,ws2812-spi";
-        label = "led_strip_snake_adapter"; // rename to avoid conflict
+        label = "WS2812"; // rename to avoid conflict
 
         /* SPI */
         reg = <0>; /* ignored, but necessary for SPI bindings */
@@ -46,6 +46,6 @@
 
 / {
     chosen {
-        zmk,underglow = &led_strip;
+        zmk,underglow = &led_strip_nano;
     };
 };
